@@ -47,7 +47,8 @@ actions:
       - docker-compose exec ldap ldappasswd -H ldap://localhost -x -D 'cn=toolscloud,ou=users,dc=toolscloud,dc=com' -w toolscloud -a toolscloud -s ${settings.password} >> ${globals.log}
 
       # force Sonar LDAP plugin
-      - docker-compose exec sonar sh -c "mkdir -p /opt/sonar/extensions/plugins && cp /opt/sonar-ldap-plugin-*.jar /opt/sonar/extensions/plugins/" >> ${globals.log}
+      - docker-compose exec sonar mkdir -p /opt/sonar/extensions/plugins>> ${globals.log}
+      - docker-compose exec sonar cp /opt/sonar-ldap-plugin-*.jar /opt/sonar/extensions/plugins/ >> ${globals.log}
 
 responses:
   4109:
