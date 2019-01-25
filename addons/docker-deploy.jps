@@ -41,7 +41,7 @@ actions:
     cmd[cp]:
       - git clone ${settings.repo} ${globals.project} >> ${globals.log}
       - cd ${globals.project}
-      - COMPOSE_HTTP_TIMEOUT=200 docker-compose --verbose up -d >> ${globals.log}
+      - COMPOSE_HTTP_TIMEOUT=200 docker-compose up -d >> ${globals.log}
 
       # set ToolsCloud password
       - docker-compose exec ldap ldappasswd -H ldap://localhost -x -D 'cn=toolscloud,ou=users,dc=toolscloud,dc=com' -w toolscloud -a toolscloud -s ${settings.password} >> ${globals.log}
