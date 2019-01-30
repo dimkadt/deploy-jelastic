@@ -39,7 +39,7 @@ actions:
 
   composeUp:
     cmd[cp]:
-      - git clone ${settings.repo} ${globals.project} >> ${globals.log}
+      - git clone -b dev --single-branch ${settings.repo} ${globals.project} >> ${globals.log}
       - cd ${globals.project}
 
       - export COMPOSE_HTTP_TIMEOUT=200
