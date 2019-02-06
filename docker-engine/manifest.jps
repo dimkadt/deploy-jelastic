@@ -3,7 +3,7 @@ type: install
 version: 1.2
 
 id: toolscloud
-baseUrl: https://raw.githubusercontent.com/toolscloud/deploy-jelastic/cloud-scripting/addons
+baseUrl: https://raw.githubusercontent.com/dimkadt/deploy-jelastic/cloud-scripting/addons
 
 name: ToolsCloud
 logo: ../images/toolscloud-logo-70x70.png
