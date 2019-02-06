@@ -43,6 +43,7 @@ actions:
       - cd ${globals.project}
 
       - export COMPOSE_HTTP_TIMEOUT=200
+      - export COMPOSE_INTERACTIVE_NO_CLI=true
       - docker-compose up -d >> ${globals.log}
 
       # set ToolsCloud password
